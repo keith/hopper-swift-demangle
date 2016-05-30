@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C25C61611CFA7AC8000A09AC /* SwiftDemangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25C61601CFA7AC8000A09AC /* SwiftDemangle.swift */; };
+		C25C61771CFBE500000A09AC /* Demangler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25C616D1CFBE500000A09AC /* Demangler.framework */; };
+		C25C617C1CFBE500000A09AC /* DemanglerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25C617B1CFBE500000A09AC /* DemanglerTests.swift */; };
+		C25C61841CFBE511000A09AC /* Demangler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25C616D1CFBE500000A09AC /* Demangler.framework */; };
+		C25C61881CFBE52F000A09AC /* Demangler.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C25C616D1CFBE500000A09AC /* Demangler.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C25C618A1CFBE54C000A09AC /* Demangler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25C61891CFBE54C000A09AC /* Demangler.swift */; };
+		C25C618C1CFBEC4D000A09AC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25C618B1CFBEC4D000A09AC /* String+Extension.swift */; };
+		C25C618E1CFBEC64000A09AC /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25C618D1CFBEC64000A09AC /* StringExtensionTests.swift */; };
+		C2D4E5281CFCC4C700820B0B /* NSBundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4E5271CFCC4C700820B0B /* NSBundle+Extension.swift */; };
+		C2D4E52B1CFCDC4700820B0B /* HPDocument+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4E52A1CFCDC4700820B0B /* HPDocument+Extension.swift */; };
+		C2D4E52D1CFD059200820B0B /* SwiftDemangle+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4E52C1CFD059200820B0B /* SwiftDemangle+Actions.swift */; };
+		C2D4E52F1CFD188F00820B0B /* ShouldDemangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4E52E1CFD188F00820B0B /* ShouldDemangleTests.swift */; };
+		C2D4E5311CFD18E100820B0B /* DemangleObjCSelectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4E5301CFD18E100820B0B /* DemangleObjCSelectorTests.swift */; };
+		C2D4E5331CFD40EB00820B0B /* InternalDemangler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4E5321CFD40EB00820B0B /* InternalDemangler.swift */; };
+		C2D4E5351CFD411C00820B0B /* LibraryDemangler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4E5341CFD411C00820B0B /* LibraryDemangler.swift */; };
+		C2D4E5371CFD413500820B0B /* ShellDemangler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4E5361CFD413500820B0B /* ShellDemangler.swift */; };
+		C2D4E5391CFD5ABA00820B0B /* SwiftDemangle+DemangleAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4E5381CFD5ABA00820B0B /* SwiftDemangle+DemangleAll.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C25C61781CFBE500000A09AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C25C613B1CFA7A84000A09AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C25C616C1CFBE500000A09AC;
+			remoteInfo = Demangler;
+		};
+		C25C61851CFBE51E000A09AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C25C613B1CFA7A84000A09AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C25C616C1CFBE500000A09AC;
+			remoteInfo = Demangler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C25C61871CFBE527000A09AC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C25C61881CFBE52F000A09AC /* Demangler.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C25C61431CFA7A84000A09AC /* Swift Demangle.hopperTool */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift Demangle.hopperTool"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25C61461CFA7A84000A09AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C25C614D1CFA7AB2000A09AC /* CommonTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTypes.h; sourceTree = "<group>"; };
+		C25C614E1CFA7AB2000A09AC /* CPUContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUContext.h; sourceTree = "<group>"; };
+		C25C614F1CFA7AB2000A09AC /* CPUDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUDefinition.h; sourceTree = "<group>"; };
+		C25C61501CFA7AB2000A09AC /* DisasmStruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisasmStruct.h; sourceTree = "<group>"; };
+		C25C61511CFA7AB2000A09AC /* FileLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileLoader.h; sourceTree = "<group>"; };
+		C25C61521CFA7AB2000A09AC /* Hopper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hopper.h; sourceTree = "<group>"; };
+		C25C61531CFA7AB2000A09AC /* HopperPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HopperPlugin.h; sourceTree = "<group>"; };
+		C25C61541CFA7AB2000A09AC /* HopperTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HopperTool.h; sourceTree = "<group>"; };
+		C25C61551CFA7AB2000A09AC /* HPBasicBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPBasicBlock.h; sourceTree = "<group>"; };
+		C25C61561CFA7AB2000A09AC /* HPDetectedFileType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPDetectedFileType.h; sourceTree = "<group>"; };
+		C25C61571CFA7AB2000A09AC /* HPDisassembledFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPDisassembledFile.h; sourceTree = "<group>"; };
+		C25C61581CFA7AB2000A09AC /* HPDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPDocument.h; sourceTree = "<group>"; };
+		C25C61591CFA7AB2000A09AC /* HPFormattedInstructionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPFormattedInstructionInfo.h; sourceTree = "<group>"; };
+		C25C615A1CFA7AB2000A09AC /* HPHopperServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPHopperServices.h; sourceTree = "<group>"; };
+		C25C615B1CFA7AB2000A09AC /* HPLoaderOptionComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPLoaderOptionComponents.h; sourceTree = "<group>"; };
+		C25C615C1CFA7AB2000A09AC /* HPProcedure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPProcedure.h; sourceTree = "<group>"; };
+		C25C615D1CFA7AB2000A09AC /* HPSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPSection.h; sourceTree = "<group>"; };
+		C25C615E1CFA7AB2000A09AC /* HPSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPSegment.h; sourceTree = "<group>"; };
+		C25C615F1CFA7AB2000A09AC /* HPTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTag.h; sourceTree = "<group>"; };
+		C25C61601CFA7AC8000A09AC /* SwiftDemangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDemangle.swift; sourceTree = "<group>"; };
+		C25C61621CFA7B15000A09AC /* Swift Demangle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift Demangle-Bridging-Header.h"; sourceTree = "<group>"; };
+		C25C616D1CFBE500000A09AC /* Demangler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Demangler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25C61711CFBE500000A09AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C25C61761CFBE500000A09AC /* DemanglerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemanglerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25C617B1CFBE500000A09AC /* DemanglerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemanglerTests.swift; sourceTree = "<group>"; };
+		C25C617D1CFBE500000A09AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C25C61891CFBE54C000A09AC /* Demangler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Demangler.swift; sourceTree = "<group>"; };
+		C25C618B1CFBEC4D000A09AC /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		C25C618D1CFBEC64000A09AC /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		C2D4E5271CFCC4C700820B0B /* NSBundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBundle+Extension.swift"; sourceTree = "<group>"; };
+		C2D4E52A1CFCDC4700820B0B /* HPDocument+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HPDocument+Extension.swift"; sourceTree = "<group>"; };
+		C2D4E52C1CFD059200820B0B /* SwiftDemangle+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftDemangle+Actions.swift"; sourceTree = "<group>"; };
+		C2D4E52E1CFD188F00820B0B /* ShouldDemangleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShouldDemangleTests.swift; sourceTree = "<group>"; };
+		C2D4E5301CFD18E100820B0B /* DemangleObjCSelectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemangleObjCSelectorTests.swift; sourceTree = "<group>"; };
+		C2D4E5321CFD40EB00820B0B /* InternalDemangler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalDemangler.swift; sourceTree = "<group>"; };
+		C2D4E5341CFD411C00820B0B /* LibraryDemangler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryDemangler.swift; sourceTree = "<group>"; };
+		C2D4E5361CFD413500820B0B /* ShellDemangler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShellDemangler.swift; sourceTree = "<group>"; };
+		C2D4E5381CFD5ABA00820B0B /* SwiftDemangle+DemangleAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftDemangle+DemangleAll.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C25C61401CFA7A84000A09AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25C61841CFBE511000A09AC /* Demangler.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25C61691CFBE500000A09AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25C61731CFBE500000A09AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25C61771CFBE500000A09AC /* Demangler.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C25C613A1CFA7A84000A09AC = {
+			isa = PBXGroup;
+			children = (
+				C25C61451CFA7A84000A09AC /* Swift Demangle */,
+				C25C616E1CFBE500000A09AC /* Demangler */,
+				C25C617A1CFBE500000A09AC /* DemanglerTests */,
+				C25C614C1CFA7AB2000A09AC /* HopperSDK */,
+				C25C61441CFA7A84000A09AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C25C61441CFA7A84000A09AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C25C61431CFA7A84000A09AC /* Swift Demangle.hopperTool */,
+				C25C616D1CFBE500000A09AC /* Demangler.framework */,
+				C25C61761CFBE500000A09AC /* DemanglerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C25C61451CFA7A84000A09AC /* Swift Demangle */ = {
+			isa = PBXGroup;
+			children = (
+				C2D4E52A1CFCDC4700820B0B /* HPDocument+Extension.swift */,
+				C2D4E5271CFCC4C700820B0B /* NSBundle+Extension.swift */,
+				C25C61601CFA7AC8000A09AC /* SwiftDemangle.swift */,
+				C2D4E52C1CFD059200820B0B /* SwiftDemangle+Actions.swift */,
+				C2D4E5381CFD5ABA00820B0B /* SwiftDemangle+DemangleAll.swift */,
+				C25C61931CFCBFD6000A09AC /* Supporting Files */,
+			);
+			path = "Swift Demangle";
+			sourceTree = "<group>";
+		};
+		C25C614C1CFA7AB2000A09AC /* HopperSDK */ = {
+			isa = PBXGroup;
+			children = (
+				C25C614E1CFA7AB2000A09AC /* CPUContext.h */,
+				C25C614F1CFA7AB2000A09AC /* CPUDefinition.h */,
+				C25C614D1CFA7AB2000A09AC /* CommonTypes.h */,
+				C25C61501CFA7AB2000A09AC /* DisasmStruct.h */,
+				C25C61511CFA7AB2000A09AC /* FileLoader.h */,
+				C25C61551CFA7AB2000A09AC /* HPBasicBlock.h */,
+				C25C61561CFA7AB2000A09AC /* HPDetectedFileType.h */,
+				C25C61571CFA7AB2000A09AC /* HPDisassembledFile.h */,
+				C25C61581CFA7AB2000A09AC /* HPDocument.h */,
+				C25C61591CFA7AB2000A09AC /* HPFormattedInstructionInfo.h */,
+				C25C615A1CFA7AB2000A09AC /* HPHopperServices.h */,
+				C25C615B1CFA7AB2000A09AC /* HPLoaderOptionComponents.h */,
+				C25C615C1CFA7AB2000A09AC /* HPProcedure.h */,
+				C25C615D1CFA7AB2000A09AC /* HPSection.h */,
+				C25C615E1CFA7AB2000A09AC /* HPSegment.h */,
+				C25C615F1CFA7AB2000A09AC /* HPTag.h */,
+				C25C61521CFA7AB2000A09AC /* Hopper.h */,
+				C25C61531CFA7AB2000A09AC /* HopperPlugin.h */,
+				C25C61541CFA7AB2000A09AC /* HopperTool.h */,
+			);
+			path = HopperSDK;
+			sourceTree = "<group>";
+		};
+		C25C616E1CFBE500000A09AC /* Demangler */ = {
+			isa = PBXGroup;
+			children = (
+				C25C61891CFBE54C000A09AC /* Demangler.swift */,
+				C2D4E5321CFD40EB00820B0B /* InternalDemangler.swift */,
+				C2D4E5341CFD411C00820B0B /* LibraryDemangler.swift */,
+				C2D4E5361CFD413500820B0B /* ShellDemangler.swift */,
+				C25C618B1CFBEC4D000A09AC /* String+Extension.swift */,
+				C25C61921CFCBFCD000A09AC /* Supporting Files */,
+			);
+			path = Demangler;
+			sourceTree = "<group>";
+		};
+		C25C617A1CFBE500000A09AC /* DemanglerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2D4E5301CFD18E100820B0B /* DemangleObjCSelectorTests.swift */,
+				C25C617B1CFBE500000A09AC /* DemanglerTests.swift */,
+				C2D4E52E1CFD188F00820B0B /* ShouldDemangleTests.swift */,
+				C25C618D1CFBEC64000A09AC /* StringExtensionTests.swift */,
+				C25C61911CFCBFC1000A09AC /* Supporting Files */,
+			);
+			path = DemanglerTests;
+			sourceTree = "<group>";
+		};
+		C25C61911CFCBFC1000A09AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C25C617D1CFBE500000A09AC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C25C61921CFCBFCD000A09AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C25C61711CFBE500000A09AC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C25C61931CFCBFD6000A09AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C25C61461CFA7A84000A09AC /* Info.plist */,
+				C25C61621CFA7B15000A09AC /* Swift Demangle-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C25C616A1CFBE500000A09AC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C25C61421CFA7A84000A09AC /* Swift Demangle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C25C61491CFA7A84000A09AC /* Build configuration list for PBXNativeTarget "Swift Demangle" */;
+			buildPhases = (
+				C25C613F1CFA7A84000A09AC /* Sources */,
+				C25C61401CFA7A84000A09AC /* Frameworks */,
+				C25C61871CFBE527000A09AC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C25C61861CFBE51E000A09AC /* PBXTargetDependency */,
+			);
+			name = "Swift Demangle";
+			productName = "Swift Demangle";
+			productReference = C25C61431CFA7A84000A09AC /* Swift Demangle.hopperTool */;
+			productType = "com.apple.product-type.bundle";
+		};
+		C25C616C1CFBE500000A09AC /* Demangler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C25C617E1CFBE500000A09AC /* Build configuration list for PBXNativeTarget "Demangler" */;
+			buildPhases = (
+				C25C61681CFBE500000A09AC /* Sources */,
+				C25C61691CFBE500000A09AC /* Frameworks */,
+				C25C616A1CFBE500000A09AC /* Headers */,
+				C25C616B1CFBE500000A09AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Demangler;
+			productName = Demangler;
+			productReference = C25C616D1CFBE500000A09AC /* Demangler.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C25C61751CFBE500000A09AC /* DemanglerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C25C61811CFBE500000A09AC /* Build configuration list for PBXNativeTarget "DemanglerTests" */;
+			buildPhases = (
+				C25C61721CFBE500000A09AC /* Sources */,
+				C25C61731CFBE500000A09AC /* Frameworks */,
+				C25C61741CFBE500000A09AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C25C61791CFBE500000A09AC /* PBXTargetDependency */,
+			);
+			name = DemanglerTests;
+			productName = DemanglerTests;
+			productReference = C25C61761CFBE500000A09AC /* DemanglerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C25C613B1CFA7A84000A09AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = smileykeith;
+				TargetAttributes = {
+					C25C61421CFA7A84000A09AC = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					C25C616C1CFBE500000A09AC = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					C25C61751CFBE500000A09AC = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = C25C613E1CFA7A84000A09AC /* Build configuration list for PBXProject "Swift Demangle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C25C613A1CFA7A84000A09AC;
+			productRefGroup = C25C61441CFA7A84000A09AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C25C61421CFA7A84000A09AC /* Swift Demangle */,
+				C25C616C1CFBE500000A09AC /* Demangler */,
+				C25C61751CFBE500000A09AC /* DemanglerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C25C616B1CFBE500000A09AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25C61741CFBE500000A09AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C25C613F1CFA7A84000A09AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D4E52D1CFD059200820B0B /* SwiftDemangle+Actions.swift in Sources */,
+				C2D4E52B1CFCDC4700820B0B /* HPDocument+Extension.swift in Sources */,
+				C2D4E5281CFCC4C700820B0B /* NSBundle+Extension.swift in Sources */,
+				C2D4E5391CFD5ABA00820B0B /* SwiftDemangle+DemangleAll.swift in Sources */,
+				C25C61611CFA7AC8000A09AC /* SwiftDemangle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25C61681CFBE500000A09AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25C618C1CFBEC4D000A09AC /* String+Extension.swift in Sources */,
+				C25C618A1CFBE54C000A09AC /* Demangler.swift in Sources */,
+				C2D4E5331CFD40EB00820B0B /* InternalDemangler.swift in Sources */,
+				C2D4E5371CFD413500820B0B /* ShellDemangler.swift in Sources */,
+				C2D4E5351CFD411C00820B0B /* LibraryDemangler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25C61721CFBE500000A09AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C25C618E1CFBEC64000A09AC /* StringExtensionTests.swift in Sources */,
+				C2D4E5311CFD18E100820B0B /* DemangleObjCSelectorTests.swift in Sources */,
+				C25C617C1CFBE500000A09AC /* DemanglerTests.swift in Sources */,
+				C2D4E52F1CFD188F00820B0B /* ShouldDemangleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C25C61791CFBE500000A09AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C25C616C1CFBE500000A09AC /* Demangler */;
+			targetProxy = C25C61781CFBE500000A09AC /* PBXContainerItemProxy */;
+		};
+		C25C61861CFBE51E000A09AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C25C616C1CFBE500000A09AC /* Demangler */;
+			targetProxy = C25C61851CFBE51E000A09AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C25C61471CFA7A84000A09AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C25C61481CFA7A84000A09AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C25C614A1CFA7A84000A09AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_NULLABLE_TO_NONNULL_CONVERSION = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "Swift Demangle/Supporting Files/Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Hopper/PlugIns/Tools";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.smileykeith.Swift-Demangle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift Demangle/Supporting Files/Swift Demangle-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WRAPPER_EXTENSION = hopperTool;
+			};
+			name = Debug;
+		};
+		C25C614B1CFA7A84000A09AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_NULLABLE_TO_NONNULL_CONVERSION = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "Swift Demangle/Supporting Files/Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Hopper/PlugIns/Tools";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.smileykeith.Swift-Demangle";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift Demangle/Supporting Files/Swift Demangle-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				WRAPPER_EXTENSION = hopperTool;
+			};
+			name = Release;
+		};
+		C25C617F1CFBE500000A09AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Demangler/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smileykeith.Demangler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C25C61801CFBE500000A09AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Demangler/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smileykeith.Demangler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C25C61821CFBE500000A09AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "DemanglerTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smileykeith.DemanglerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C25C61831CFBE500000A09AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "DemanglerTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smileykeith.DemanglerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C25C613E1CFA7A84000A09AC /* Build configuration list for PBXProject "Swift Demangle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C25C61471CFA7A84000A09AC /* Debug */,
+				C25C61481CFA7A84000A09AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C25C61491CFA7A84000A09AC /* Build configuration list for PBXNativeTarget "Swift Demangle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C25C614A1CFA7A84000A09AC /* Debug */,
+				C25C614B1CFA7A84000A09AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C25C617E1CFBE500000A09AC /* Build configuration list for PBXNativeTarget "Demangler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C25C617F1CFBE500000A09AC /* Debug */,
+				C25C61801CFBE500000A09AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C25C61811CFBE500000A09AC /* Build configuration list for PBXNativeTarget "DemanglerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C25C61821CFBE500000A09AC /* Debug */,
+				C25C61831CFBE500000A09AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C25C613B1CFA7A84000A09AC /* Project object */;
+}
