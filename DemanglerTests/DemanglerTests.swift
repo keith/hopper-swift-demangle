@@ -27,7 +27,7 @@ final class DemanglerTests: XCTestCase {
 
     func testDemangleSanity() {
         let demangledResult = demangler.demangle(string: "__TFV3foo3BarCfT_S0_")
-        let expectedName = "foo.Bar.init () -> foo.Bar"
+        let expectedName = "foo.Bar.init() -> foo.Bar"
 
         XCTAssertEqual(demangledResult, DemangleResult.Success(expectedName))
     }

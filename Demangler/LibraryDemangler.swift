@@ -8,29 +8,29 @@ private let kDemangleLibraryPath = ("/Applications/Xcode.app/Contents/Developer/
 private let kBufferSize = 1024
 
 final class LibraryDemangler: InternalDemangler {
-    private var handle: UnsafeMutablePointer<Void> = {
+    private var handle: UnsafeMutableRawPointer = {
         return dlopen(kDemangleLibraryPath, RTLD_NOW)
     }()
 
     private lazy var internalDemangleFunction: SwiftDemangleFunction = {
         let address = dlsym(self.handle, "swift_demangle_getDemangledName")
-        return unsafeBitCast(address, SwiftDemangleFunction.self)
+        return unsafeBitCast(address, to: SwiftDemangleFunction.self)
     }()
 
-    func demangle(string string: String) -> String? {
+    func demangle(string: String) -> String? {
         let formattedString = self.removingExcessLeadingUnderscores(fromString: string)
-        let outputString = UnsafeMutablePointer<CChar>.alloc(kBufferSize)
+        let outputString = UnsafeMutablePointer<CChar>.allocate(capacity: kBufferSize)
         let resultSize = self.internalDemangleFunction(formattedString, outputString, kBufferSize)
         if resultSize > kBufferSize {
             NSLog("Attempted to demangle string with length \(resultSize) but buffer size \(kBufferSize)")
         }
 
-        return String(CString: outputString, encoding: NSUTF8StringEncoding)
+        return String(cString: outputString, encoding: .utf8)
     }
 
     private func removingExcessLeadingUnderscores(fromString string: String) -> String {
         if string.hasPrefix("__T") {
-            return String(string.characters.dropFirst())
+            return String(string.dropFirst())
         }
 
         return string

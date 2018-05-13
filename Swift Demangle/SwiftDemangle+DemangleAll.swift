@@ -15,10 +15,10 @@ extension SwiftDemangle {
                                                     file: HPDisassembledFile,
                                                     shouldCancel: UnsafeMutablePointer<Bool>)
     {
-        let segments = file.segments()
+        let segments = file.segments() ?? []
         var procedureCount: Int?
 
-        dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0)) {
+        DispatchQueue.global(qos: .default).async {
             let totalProcedureCount = segments.reduce(0) { accumulator, segment in
                 return accumulator + segment.procedures().count
             }
@@ -30,7 +30,7 @@ extension SwiftDemangle {
         var processedCount = 0
         for segment in segments {
             for procedure in segment.procedures() {
-                if shouldCancel.memory {
+                if shouldCancel.pointee {
                     let countString = procedureCount.map(String.init) ?? "Unknown"
                     return document.logErrorStringMessage(
                         "Cancelling after demangling \(processedCount) of \(countString) procedures")
@@ -45,7 +45,7 @@ extension SwiftDemangle {
                 }
 
                 let procedureAddress = procedure.entryPoint()
-                let mangledString: String? = segment.nameForVirtualAddress(procedureAddress)
+                let mangledString: String? = segment.name(forVirtualAddress: procedureAddress)
                 let demangleResult = self.demangler.demangle(string: mangledString)
                 self.handle(demangleResult: demangleResult, forAddress: procedureAddress,
                             mangledString: mangledString, file: file, document: document)
@@ -64,7 +64,7 @@ extension SwiftDemangle {
      */
     private func showAnalysisAlertAndCancel(forDocument document: HPDocument) -> Bool {
         if document.disassembledFile()?.analysisInProgress() == true {
-            let response = document.displayAlertWithMessageText("File is still being analyzed",
+            let response = document.displayAlert(withMessageText: "File is still being analyzed",
                 defaultButton: "Cancel", alternateButton: "Continue", otherButton: nil,
                 informativeText: "Would you like to demangle what has already been loaded?")
 
