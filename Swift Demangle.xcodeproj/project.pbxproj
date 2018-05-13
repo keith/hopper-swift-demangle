@@ -504,7 +504,7 @@
 				DSTROOT = "$(HOME)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Swift Demangle/Supporting Files/Info.plist";
-				INSTALL_PATH = "/Library/Application Support/Hopper/PlugIns/Tools";
+				INSTALL_PATH = "/Library/Application Support/Hopper/PlugIns/v4/Tools/";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smileykeith.Swift-Demangle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -525,7 +525,7 @@
 				DSTROOT = "$(HOME)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Swift Demangle/Supporting Files/Info.plist";
-				INSTALL_PATH = "/Library/Application Support/Hopper/PlugIns/Tools";
+				INSTALL_PATH = "/Library/Application Support/Hopper/PlugIns/v4/Tools/";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.smileykeith.Swift-Demangle";
 				PRODUCT_NAME = "$(TARGET_NAME)";

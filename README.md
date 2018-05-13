@@ -13,8 +13,8 @@ Download the latest release from [here][releases]. Then:
 
 ```
 $ unzip SwiftDemangle.hopperTool.zip
-$ mkdir -p ~/Library/Application\ Support/Hopper/PlugIns/Tools/
-$ mv Swift\ Demangle.hopperTool ~/Library/Application\ Support/Hopper/PlugIns/Tools/
+$ mkdir -p ~/Library/Application\ Support/Hopper/PlugIns/v4/Tools/
+$ mv Swift\ Demangle.hopperTool ~/Library/Application\ Support/Hopper/PlugIns/v4/Tools/
 ```
 
 ## Usage
