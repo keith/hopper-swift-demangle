@@ -8,7 +8,7 @@ public enum DemangleResult {
 
 public final class Demangler {
     private let ExtractFromObjCRegex = try! NSRegularExpression(pattern: "^[-+]\\[([^\\]]+)\\s+[^\\]]+\\]$",
-                                                                options: [.AnchorsMatchLines])
+                                                                options: [.anchorsMatchLines])
 
     private var internalDemangler: InternalDemangler = LibraryDemangler()
 
@@ -52,29 +52,29 @@ public final class Demangler {
      - returns: The demangled name integrated into the ObjC selector
      */
     func integrateDemangledString(intoSelector selector: String, string: String) -> String {
-        let range = NSRange(location: 0, length: selector.characters.count)
-        let matches = self.ExtractFromObjCRegex.matchesInString(selector, options: [], range: range)
+        let range = NSRange(location: 0, length: selector.utf16.count)
+        let matches = self.ExtractFromObjCRegex.matches(in: selector, options: [], range: range)
         assert(matches.count <= 1)
         assert(matches.first?.numberOfRanges == 2)
 
         let match = matches.first!
-        let matchRange = match.rangeAtIndex(1)
+        let matchRange = match.range(at: 1)
         let selectorString = selector as NSString
-        let start = selectorString.substringWithRange(NSRange(location: 0, length: matchRange.location))
+        let start = selectorString.substring(with: NSRange(location: 0, length: matchRange.location))
         let position = matchRange.location + matchRange.length
-        let end = selectorString.substringWithRange(NSRange(location: position,
+        let end = selectorString.substring(with: NSRange(location: position,
             length: selectorString.length - position))
         return "\(start)\(string)\(end)"
     }
 
     func extractMangledString(fromObjCSelector selector: String) -> (String, Bool) {
-        let range = NSRange(location: 0, length: selector.characters.count)
-        let matches = self.ExtractFromObjCRegex.matchesInString(selector, options: [], range: range)
+        let range = NSRange(location: 0, length: selector.utf16.count)
+        let matches = self.ExtractFromObjCRegex.matches(in: selector, options: [], range: range)
         assert(matches.count <= 1)
 
-        if let match = matches.first where match.numberOfRanges == 2 {
-            let range = match.rangeAtIndex(1)
-            return ((selector as NSString).substringWithRange(range), true)
+        if let match = matches.first, match.numberOfRanges == 2 {
+            let range = match.range(at: 1)
+            return ((selector as NSString).substring(with: range), true)
         }
 
         return (selector, false)
@@ -90,7 +90,7 @@ public final class Demangler {
 
      - returns: true if a demangle should be attempted
      */
-    func shouldDemangle(string string: String) -> Bool {
+    func shouldDemangle(string: String) -> Bool {
         if string.hasPrefix("__T") {
             return true
         }

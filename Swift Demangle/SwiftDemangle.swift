@@ -11,7 +11,7 @@ final class SwiftDemangle: NSObject, HopperTool {
     }
 
     func pluginUUID() -> HopperUUID {
-        return self.services.UUIDWithString("C8FAB152-90FC-4C70-9FA2-4828A2DF322F")
+        return self.services.uuid(with: "C8FAB152-90FC-4C70-9FA2-4828A2DF322F")
     }
 
     func pluginName() -> String {
@@ -23,7 +23,7 @@ final class SwiftDemangle: NSObject, HopperTool {
     }
 
     func pluginVersion() -> String {
-        return NSBundle.mainBundle().pluginVersion
+        return Bundle.main.pluginVersion
     }
 
     func pluginCopyright() -> String {
@@ -38,7 +38,7 @@ final class SwiftDemangle: NSObject, HopperTool {
         return .Plugin_Tool
     }
 
-    func toolMenuDescription() -> [[String: AnyObject]] {
+    func toolMenuDescription() -> [[String: Any]] {
         return [
             [
                 "Title": "Demangle Swift",

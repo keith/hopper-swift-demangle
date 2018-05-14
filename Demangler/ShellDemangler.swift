@@ -5,7 +5,7 @@ final class ShellDemangler: InternalDemangler {
         return self.output(forShellCommand: "/usr/bin/xcrun --find swift-demangle")!
     }()
 
-    func demangle(string string: String) -> String? {
+    func demangle(string: String) -> String? {
         return self.output(forShellCommand: self.demangleCommand(forString: string))
     }
 
@@ -16,8 +16,8 @@ final class ShellDemangler: InternalDemangler {
     private func output(forShellCommand command: String) -> String? {
         assert(command.split().count >= 2)
 
-        let task = NSTask()
-        let pipe = NSPipe()
+        let task = Process()
+        let pipe = Pipe()
         let components = command.split()
 
         task.launchPath = components.first
@@ -28,6 +28,6 @@ final class ShellDemangler: InternalDemangler {
         task.waitUntilExit()
 
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        return String(data: data, encoding: NSUTF8StringEncoding)?.strip()
+        return String(data: data, encoding: .utf8)?.strip()
     }
 }
